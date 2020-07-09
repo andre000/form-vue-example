@@ -13,7 +13,7 @@ export default {
   name: 'Pinput',
   props: {
     value: {
-      type: [String, Number, InputEvent]
+      type: [String, Number]
     },
 
     errorMessage: {
