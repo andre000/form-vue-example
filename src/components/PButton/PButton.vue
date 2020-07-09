@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="`button--${type}`">
+  <button class="button" :class="`button--${color}`">
     <slot />
   </button>
 </template>
@@ -8,7 +8,7 @@
 export default {
   name: 'PButton',
   props: {
-    type: {
+    color: {
       type: String,
       default: 'default',
       validator: v => ['default', 'primary', 'secondary'].includes(v)
