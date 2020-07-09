@@ -13,6 +13,11 @@
     <div class="form__line">
       <p-image-upload />
     </div>
+
+    <div class="form__actions">
+      <p-button>Limpar</p-button>
+      <p-button>Cadastrar</p-button>
+    </div>
   </div>
 </template>
 
@@ -20,13 +25,15 @@
 import { PInput } from '@/components/PInput'
 import { PTextArea } from '@/components/PTextArea'
 import { PImageUpload } from '@/components/PImageUpload'
+import { PButton } from '@/components/PButton'
 
 export default {
   name: 'PForm',
   components: {
     PInput,
     PTextArea,
-    PImageUpload
+    PImageUpload,
+    PButton
   }
 }
 </script>
