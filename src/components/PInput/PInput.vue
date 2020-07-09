@@ -1,5 +1,5 @@
 <template>
-  <div class="field">
+  <div class="field" :class="errorMessage && 'field--error'">
     <input v-on="$listeners" v-bind="$attrs" />
     <div v-if="errorMessage" class="field__message field__message--error">
       {{ errorMessage }}
@@ -23,6 +23,15 @@ export default {
     mask: {
       type: String,
       default: null
+    }
+  },
+
+  computed: {
+    listeners() {
+      return {
+        ...this.$listeners,
+        input: this.updateValue
+      }
     }
   },
 
