@@ -1,36 +1,63 @@
 <template>
-  <div class="image-upload" @click="handleClick">
+  <div
+    class="image-upload"
+    @click="handleClick"
+    @dragover.stop.prevent="handleDrag"
+    @drop.stop.prevent="handleDrop"
+  >
     <input
       ref="image-order"
       type="file"
       accept=".png, .jpg, .jpeg"
       name="image-order"
       class="image-upload__input"
-      @change="generatePreview"
+      @change="handleUpload"
     />
 
-    <img v-if="preview" :src="preview" alt="" />
+    <img v-if="image && image.preview" :src="image.preview" alt="" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PimageUpload',
-  data: () => ({
-    file: null,
-    preview: null
-  }),
+  name: 'PImageUpload',
+  props: {
+    image: null
+  },
+
+  watch: {
+    image() {
+      if (this.image === null) {
+        this.$refs['image-order'].value = ''
+      }
+    }
+  },
 
   methods: {
     handleClick() {
       this.$refs['image-order'].click()
     },
 
-    generatePreview() {
-      if (!this.$refs['image-order'].files.length) return
+    handleDrag() {},
 
+    handleDrop(event) {
+      this.$refs['image-order'].files = event.dataTransfer.files
+      this.handleUpload()
+    },
+
+    handleUpload() {
+      if (!this.$refs['image-order'].files.length) return
+      this.generatePreview()
+    },
+
+    generatePreview() {
       const reader = new FileReader()
-      reader.onload = e => (this.preview = e.target.result)
+      reader.onload = e => {
+        this.$emit('upload', {
+          preview: e.target.result,
+          file: this.$refs['image-order'].files[0]
+        })
+      }
       reader.readAsDataURL(this.$refs['image-order'].files[0])
     }
   }
