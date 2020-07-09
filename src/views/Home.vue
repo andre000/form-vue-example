@@ -1,9 +1,15 @@
 <template>
-  <div class="home"></div>
+  <section class="home">
+    <p-form></p-form>
+  </section>
 </template>
 
 <script>
+import { PForm } from '@/components/PForm'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    PForm
+  }
 }
 </script>
