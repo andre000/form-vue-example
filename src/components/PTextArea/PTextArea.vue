@@ -1,6 +1,6 @@
 <template>
   <div class="text" :class="errorMessage && 'text--error'">
-    <textarea v-on="$listeners" v-bind="$attrs"></textarea>
+    <textarea :value="value" v-on="listeners" v-bind="$attrs"></textarea>
     <div v-if="errorMessage" class="text__message text__message--error">
       {{ errorMessage }}
     </div>

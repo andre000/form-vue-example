@@ -1,6 +1,6 @@
 <template>
   <div class="field" :class="errorMessage && 'field--error'">
-    <input v-on="$listeners" v-bind="$attrs" />
+    <input :value="value" v-on="listeners" v-bind="$attrs" />
     <div v-if="errorMessage" class="field__message field__message--error">
       {{ errorMessage }}
     </div>
@@ -13,7 +13,7 @@ export default {
   name: 'Pinput',
   props: {
     value: {
-      type: [String, Number]
+      type: [String, Number, InputEvent]
     },
 
     errorMessage: {
