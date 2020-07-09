@@ -9,18 +9,24 @@
     <div class="form__line">
       <p-text-area />
     </div>
+
+    <div class="form__line">
+      <p-image-upload />
+    </div>
   </div>
 </template>
 
 <script>
 import { PInput } from '@/components/PInput'
 import { PTextArea } from '@/components/PTextArea'
+import { PImageUpload } from '@/components/PImageUpload'
 
 export default {
   name: 'PForm',
   components: {
     PInput,
-    PTextArea
+    PTextArea,
+    PImageUpload
   }
 }
 </script>
