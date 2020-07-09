@@ -19,6 +19,7 @@ const optionValidator = option =>
   Object.keys(option).length === 2
 
 export default {
+  name: 'PSwitch',
   props: {
     value: {
       type: [String, Number],
