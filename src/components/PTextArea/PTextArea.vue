@@ -10,6 +10,7 @@
 <script>
 export default {
   inheritAttrs: false,
+  name: 'PInput',
   props: {
     value: {
       type: [String, Number]
