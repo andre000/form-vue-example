@@ -26,7 +26,7 @@ describe('POrderItem component', () => {
     expect(wrapper.html()).toMatchSnapshot())
 
   it('should have an image element with the thumbnail of the order', () => {
-    const thumb = wrapper.find('.order-item__image img');
+    const thumb = wrapper.find('.order-item__image img')
     expect(thumb.exists()).toBe(true)
     expect(thumb.element.src).toMatch(mockedOrder.image.preview)
   })
