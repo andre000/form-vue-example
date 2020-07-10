@@ -19,7 +19,7 @@ describe('PImageUpload component', () => {
     expect(wrapper.find('input[type="file"]').exists()).toBe(true)
   })
 
-  it.only('should generate preview when a file is uploaded', async () => {
+  it('should generate preview when a file is uploaded', async () => {
     const mockedFile = [
       {
         name: 'image.png',
