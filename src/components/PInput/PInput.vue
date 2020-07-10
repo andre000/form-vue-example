@@ -1,6 +1,7 @@
 <template>
   <div class="field" :class="errorMessage && 'field--error'">
-    <input :value="value" v-on="listeners" v-bind="$attrs" />
+    <input v-if="!isMoney" :value="value" v-on="listeners" v-bind="$attrs" />
+    <money v-else :value="value" v-bind="moneyMask" v-on="listeners" />
     <div v-if="errorMessage" class="field__message field__message--error">
       {{ errorMessage }}
     </div>
@@ -8,9 +9,14 @@
 </template>
 
 <script>
+import { Money } from 'v-money'
+
 export default {
   inheritAttrs: false,
   name: 'PInput',
+  components: {
+    Money
+  },
   props: {
     value: {
       type: [String, Number]
@@ -21,9 +27,9 @@ export default {
       default: null
     },
 
-    mask: {
-      type: String,
-      default: null
+    isMoney: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -33,12 +39,21 @@ export default {
         ...this.$listeners,
         input: this.updateValue
       }
+    },
+
+    moneyMask() {
+      return {
+        decimal: ',',
+        thousands: '.',
+        prefix: 'R$ ',
+        precision: 2
+      }
     }
   },
 
   methods: {
     updateValue(e) {
-      this.$emit('input', e.target.value)
+      this.$emit('input', this.isMoney ? e : e.target.value)
     }
   }
 }
