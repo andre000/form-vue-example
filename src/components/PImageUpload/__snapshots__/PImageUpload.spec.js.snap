@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PImageUpload component should match the snapshot 1`] = `
+<div class="image-upload"><input type="file" accept=".png, .jpg, .jpeg" name="image-order" class="image-upload__input">
+  <!---->
+</div>
+`;
