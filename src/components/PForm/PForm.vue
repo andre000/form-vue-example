@@ -10,9 +10,42 @@
     </div>
 
     <div class="form__line">
-      <p-input v-model="name" placeholder="Titulo do Pedido" />
-      <p-input v-model="flavour" placeholder="Sabor" />
-      <p-input v-model="price" placeholder="R$" type="number" />
+      <validation-provider
+        :rules="{ required: true, min: 3, max: 60 }"
+        v-slot="{ errors }"
+        name="'Título do Pedido'"
+      >
+        <p-input
+          v-model="name"
+          placeholder="Título do Pedido"
+          :errorMessage="errors[0]"
+        />
+      </validation-provider>
+
+      <validation-provider
+        :rules="{ required: true, min: 3, max: 60 }"
+        v-slot="{ errors }"
+        name="'Sabor'"
+      >
+        <p-input
+          v-model="flavour"
+          placeholder="Sabor"
+          :errorMessage="errors[0]"
+        />
+      </validation-provider>
+
+      <validation-provider
+        :rules="{ required: true, min: 3, max: 60 }"
+        v-slot="{ errors }"
+        name="'Preço'"
+      >
+        <p-input
+          v-model="price"
+          placeholder="R$"
+          is-money
+          :errorMessage="errors[0]"
+        />
+      </validation-provider>
     </div>
 
     <div class="form__line">
@@ -38,10 +71,12 @@ import { PTextArea } from '@/components/PTextArea'
 import { PImageUpload } from '@/components/PImageUpload'
 import { PButton } from '@/components/PButton'
 import { PSwitch } from '@/components/PSwitch'
+import ValidationProvider from '@/plugins/vee-validate'
 
 export default {
   name: 'PForm',
   components: {
+    ValidationProvider,
     PInput,
     PTextArea,
     PImageUpload,
