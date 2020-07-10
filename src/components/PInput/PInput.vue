@@ -1,7 +1,13 @@
 <template>
   <div class="field" :class="errorMessage && 'field--error'">
     <input v-if="!isMoney" :value="value" v-on="listeners" v-bind="$attrs" />
-    <money v-else :value="value" v-bind="moneyMask" v-on="listeners" />
+    <money
+      v-else
+      :value="value"
+      v-bind="moneyMask"
+      v-on="listeners"
+      @blur.native="$emit('blur')"
+    />
     <div v-if="errorMessage" class="field__message field__message--error">
       {{ errorMessage }}
     </div>
