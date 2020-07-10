@@ -1,15 +1,18 @@
 <template>
-  <label for="toggle_button">
-    <span v-if="currentState">{{ firstOption.label }}</span>
-    <span v-if="!currentState">{{ secondOption.label }}</span>
-
+  <label for="toggle-button" @click="$ref['toggle-button'].click()">
+    <span>{{ firstOption.label }}</span>
     <input
+      ref="toggle-button"
       type="checkbox"
-      id="toggle_button"
+      id="toggle-button"
       v-on="listeners"
       v-bind="$attrs"
       v-model="currentState"
+      style="display: none"
     />
+    <i v-if="value === firstOption.value"> ⬅ </i>
+    <i v-if="value === secondOption.value"> ➡ </i>
+    <span>{{ secondOption.label }}</span>
   </label>
 </template>
 
