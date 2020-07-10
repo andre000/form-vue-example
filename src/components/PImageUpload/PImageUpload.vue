@@ -42,11 +42,11 @@ export default {
 
     handleDrop(event) {
       this.$refs['image-order'].files = event.dataTransfer.files
-      this.handleUpload()
+      this.handleUpload({ target: { files: event.dataTransfer.files } })
     },
 
-    handleUpload() {
-      if (!this.$refs['image-order'].files.length) return
+    handleUpload(e) {
+      if (!e.target.files.length) return
       this.generatePreview()
     },
 
