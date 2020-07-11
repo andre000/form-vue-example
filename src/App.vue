@@ -51,6 +51,7 @@ export default {
     position: relative;
     min-height: 346.31px;
     width: 100vw;
+    margin-bottom: 50px;
 
     .app__logo svg {
       max-width: 736px;

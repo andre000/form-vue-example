@@ -1,7 +1,7 @@
 <template>
   <section class="home">
-    <p-order-form />
-    <p-order-list :orders="filteredOrders" />
+    <p-order-form class="home__form" />
+    <p-order-list class="home__list" :orders="filteredOrders" />
   </section>
 </template>
 
@@ -23,3 +23,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.home {
+  margin-top: -80px;
+}
+</style>
