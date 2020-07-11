@@ -29,7 +29,7 @@ export default {
 .app {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 100%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background: linear-gradient(
@@ -40,7 +40,7 @@ export default {
     rgba(255, 255, 255, 1) 80%,
     rgba(255, 255, 255, 0) 100%
   );
-  overflow-x: hidden;
+  overflow: hidden;
   min-height: 100vh;
 
   .app__header {
