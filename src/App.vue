@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <header class="app__header">
-      <background-header class="app__header__background" />
+      <p-header-background />
       <p-logo class="app__logo" />
     </header>
     <main class="app__main">
@@ -12,13 +12,13 @@
 
 <script>
 import { PLogo } from '@/components/PLogo'
-import BackgroundHeader from '@/assets/img/wave.svg'
+import { PHeaderBackground } from '@/components/PHeaderBackground'
 
 export default {
   name: 'app',
   components: {
     PLogo,
-    BackgroundHeader
+    PHeaderBackground
   }
 }
 </script>
@@ -32,7 +32,16 @@ export default {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
   overflow-x: hidden;
+  min-height: 100vh;
 
   .app__header {
     grid-area: 1 / 1 / 2 / 2;
@@ -47,11 +56,6 @@ export default {
       max-width: 736px;
       width: 80vw;
       position: relative;
-    }
-
-    .app__header__background {
-      position: absolute;
-      width: 100vw;
     }
   }
 
