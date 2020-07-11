@@ -5,67 +5,88 @@
       @submit.prevent="handleSubmit"
       @reset.prevent="handleReset"
     >
-      <div class="form__switch">
-        <p-switch
-          :first-option="{ label: 'Comida', value: 'food' }"
-          :second-option="{ label: 'Bebida', value: 'drinks' }"
-          @input="handleOrderType"
-          :value="orderType"
-        />
-      </div>
-
-      <div class="form__line">
-        <validation-provider
-          :rules="{ required: true, min: 3, max: 60 }"
-          v-slot="{ errors }"
-          name="'Título do Pedido'"
+      <div class="form__header">
+        <span class="form__title"
+          >Monte aqui o seu cardápio. O que está esperando?</span
         >
-          <p-input
-            v-model="name"
-            placeholder="Título do Pedido"
-            :errorMessage="errors[0]"
+        <div class="form__switch">
+          <p-switch
+            :first-option="{ label: 'Comida', value: 'food' }"
+            :second-option="{ label: 'Bebida', value: 'drinks' }"
+            @input="handleOrderType"
+            :value="orderType"
           />
-        </validation-provider>
-
-        <validation-provider
-          :rules="{ required: true, min: 3, max: 60 }"
-          v-slot="{ errors }"
-          name="'Sabor'"
-        >
-          <p-input
-            v-model="flavour"
-            placeholder="Sabor"
-            :errorMessage="errors[0]"
-          />
-        </validation-provider>
-
-        <validation-provider
-          :rules="{ required: true, min_value: 0.01 }"
-          v-slot="{ errors }"
-          name="'Preço'"
-          ref="price-validator"
-        >
-          <p-input
-            v-model="price"
-            @input="handlePriceValidation"
-            placeholder="R$"
-            is-money
-            :errorMessage="errors[0]"
-          />
-        </validation-provider>
+        </div>
       </div>
 
-      <div class="form__line">
-        <p-text-area v-model="description" />
+      <div class="form__body">
+        <div class="form__row">
+          <validation-provider
+            :slim="true"
+            :rules="{ required: true, min: 3, max: 60 }"
+            v-slot="{ errors }"
+            name="'Título do Pedido'"
+          >
+            <p-input
+              class="w-40"
+              v-model="name"
+              placeholder="Título do Pedido"
+              :errorMessage="errors[0]"
+            />
+          </validation-provider>
+
+          <validation-provider
+            :slim="true"
+            :rules="{ required: true, min: 3, max: 60 }"
+            v-slot="{ errors }"
+            name="'Sabor'"
+          >
+            <p-input
+              class="w-40"
+              v-model="flavour"
+              placeholder="Sabor"
+              :errorMessage="errors[0]"
+            />
+          </validation-provider>
+
+          <validation-provider
+            class="w-20"
+            :slim="true"
+            :rules="{ required: true, min_value: 0.01 }"
+            v-slot="{ errors }"
+            name="'Preço'"
+            ref="price-validator"
+          >
+            <p-input
+              v-model="price"
+              @input="handlePriceValidation"
+              placeholder="R$"
+              is-money
+              :errorMessage="errors[0]"
+            />
+          </validation-provider>
+        </div>
+
+        <div class="form__row">
+          <p-text-area
+            placeholder="Descrição"
+            class="w-100"
+            v-model="description"
+          />
+        </div>
+
+        <div class="form__row">
+          <p-image-upload :image="image" @upload="file => (image = file)" />
+        </div>
       </div>
 
-      <div class="form__line">
-        <p-image-upload :image="image" @upload="file => (image = file)" />
-      </div>
-
-      <div class="form__actions">
-        <p-button type="reset">Limpar</p-button>
-        <p-button type="submit" :disabled="invalid">Cadastrar</p-button>
+      <div class="form__footer">
+        <div class="form__actions">
+          <p-button color="primary" type="reset">Limpar</p-button>
+          <p-button color="secondary" type="submit" :disabled="invalid"
+            >Cadastrar</p-button
+          >
+        </div>
       </div>
     </form>
   </validation-observer>
@@ -132,4 +153,82 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+@import '@/assets/scss/variables.scss';
+
+.form {
+  width: 60vw;
+  box-shadow: 0px 0px 30px #740b0b45;
+  border-radius: 20px;
+  position: relative;
+  background: #ffffff 0% 0% no-repeat padding-box;
+
+  .form__header {
+    background: $secondary;
+    padding: 25px 60px 40px 60px;
+    position: relative;
+    border-radius: 20px 20px 0px 0px;
+
+    .form__title {
+      color: $primary-text;
+      font: Bold Italic 24px/29px Roboto;
+    }
+
+    .form__switch {
+      color: $primary-text;
+      position: absolute;
+      right: 60px;
+      top: 25px;
+    }
+  }
+
+  .form__body {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 50px 20px;
+    margin-top: -20px;
+    position: relative;
+
+    .form__row {
+      display: flex;
+      margin-bottom: 20px;
+      position: relative;
+
+      .field:not(:first-child):not(:last-child):not(:only-child) {
+        margin: 0px 10px;
+      }
+      .field:first-child {
+        margin: 0px 10px 0px 0px;
+      }
+      .field:last-child {
+        margin: 0px 0px 0px 10px;
+      }
+      .field:only-child {
+        margin: 0px;
+      }
+
+      textarea {
+        height: 80px;
+      }
+
+      .image-upload {
+        width: 100%;
+        height: calc(110px - 40px - 2px);
+      }
+    }
+  }
+
+  .form__footer {
+    position: absolute;
+    width: 100%;
+    bottom: -30px;
+    text-align: center;
+
+    .button {
+      &:first-child {
+        margin-right: 35px;
+      }
+    }
+  }
+}
+</style>
