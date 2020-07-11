@@ -87,6 +87,7 @@ export default {
   font: 400 16px/21px Roboto;
   color: $primary-text;
   cursor: pointer;
+  user-select: none;
 
   .selected {
     font-weight: bold;
