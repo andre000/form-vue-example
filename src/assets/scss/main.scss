@@ -11,3 +11,30 @@ body {
 figure {
   margin: 0px;
 }
+
+.field {
+  input, textarea {
+    box-sizing: border-box;
+    border: 1px solid $primary-text;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: $primary-text;
+    outline: none;
+    width: 100%;
+    &::placeholder {
+      color: $primary-text;
+    }
+  }
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-100 {
+  width: 100%;
+}

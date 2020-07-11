@@ -1,7 +1,7 @@
 <template>
-  <div class="text" :class="errorMessage && 'text--error'">
+  <div class="field" :class="errorMessage && 'field--error'">
     <textarea :value="value" v-on="listeners" v-bind="$attrs"></textarea>
-    <div v-if="errorMessage" class="text__message text__message--error">
+    <div v-if="errorMessage" class="field__message field__message--error">
       {{ errorMessage }}
     </div>
   </div>
@@ -39,4 +39,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+textarea {
+  resize: none;
+}
+</style>
