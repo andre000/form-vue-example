@@ -48,7 +48,6 @@
           <p-input
             v-model="price"
             @input="handlePriceValidation"
-            @blur.native="console.log('a')"
             placeholder="R$"
             is-money
             :errorMessage="errors[0]"
