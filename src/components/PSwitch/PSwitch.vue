@@ -1,5 +1,5 @@
 <template>
-  <label for="toggle-button" @click="$ref['toggle-button'].click()">
+  <label for="toggle-button">
     <span>{{ firstOption.label }}</span>
     <input
       ref="toggle-button"
