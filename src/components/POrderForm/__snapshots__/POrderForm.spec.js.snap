@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`POrderForm component should match the snapshot 1`] = `
+<span><form class="form"><div class="form__switch"><label for="toggle-button"><span>Comida</span> <input type="checkbox" id="toggle-button" style="display: none;"> <i> ⬅ </i>
+<!----> <span>Bebida</span></label></div>
+<div class="form__line"><span><div class="field"><input placeholder="Título do Pedido"> <!----></div></span> <span><div class="field"><input placeholder="Sabor"> <!----></div></span> <span><div class="field"><input type="tel" class="v-money"> <!----></div></span></div>
+<div class="form__line">
+  <div class="text"><textarea></textarea>
+    <!---->
+  </div>
+</div>
+<div class="form__line">
+  <div class="image-upload"><input type="file" accept=".png, .jpg, .jpeg" name="image-order" class="image-upload__input">
+    <!---->
+  </div>
+</div>
+<div class="form__actions"><button class="button button--default" type="reset">Limpar</button> <button class="button button--default" type="submit">Cadastrar</button></div>
+</form>
+</span>
+`;
