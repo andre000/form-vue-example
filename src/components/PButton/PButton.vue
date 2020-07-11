@@ -31,7 +31,8 @@ export default {
   cursor: pointer;
   transition: filter 0.3s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     filter: drop-shadow(2px 4px 6px $shadow-color);
   }
   &:disabled {
