@@ -44,6 +44,12 @@ export default {
     currentState: false
   }),
 
+  mounted() {
+    if (this.value === this.secondOption.value) {
+      this.currentState = true
+    }
+  },
+
   computed: {
     listeners() {
       return {
