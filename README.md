@@ -12,7 +12,7 @@
 - [X] Responsive layout
 - [x] Unit tests
 - [x] BEM pattern
-- [ ] Animated transition
+- [X] Animated transition
 - [x] Drag and drop upload
 - [x] Paralax effect
 
