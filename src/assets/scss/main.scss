@@ -35,6 +35,7 @@ figure {
   }
 }
 
+// Utilities
 .w-40 {
   width: 40%;
 }
@@ -45,4 +46,26 @@ figure {
 
 .w-100 {
   width: 100%;
+}
+
+
+.hide-xs {
+  @media #{$screen-xs} {
+    display: none;
+  }
+}
+.hide-sm {
+  @media #{$screen-sm} {
+    display: none;
+  }
+}
+.hide-md {
+  @media #{$screen-md} {
+    display: none;
+  }
+}
+.hide-lg {
+  @media #{$screen-lg} {
+    display: none;
+  }
 }
