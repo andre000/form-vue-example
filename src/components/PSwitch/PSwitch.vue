@@ -89,12 +89,6 @@ export default {
   cursor: pointer;
   user-select: none;
 
-  @media #{$screen-xs} {
-    span:not(.switch__bar) {
-      display: block;
-    }
-  }
-
   .selected {
     font-weight: bold;
   }
