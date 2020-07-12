@@ -14,7 +14,7 @@
       @change="handleUpload"
     />
 
-    <icon-upload v-if="!image" class="image-upload__icon" />
+    <icon-upload v-if="!image" class="image-upload__icon hide-sm hide-xs" />
     <span v-if="!image" class="image-upload__message">
       Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar a
       pasta.

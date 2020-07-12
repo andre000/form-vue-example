@@ -168,6 +168,10 @@ export default {
   position: relative;
   background: #ffffff 0% 0% no-repeat padding-box;
 
+  @media #{$screen-xs} {
+    width: 80vw;
+  }
+
   .form__pasteis {
     width: 393px;
     height: 316px;
@@ -220,6 +224,16 @@ export default {
       margin-bottom: 20px;
       position: relative;
 
+      @media #{$screen-xs} {
+        &:first-child {
+          flex-direction: column;
+          .field {
+            width: 100%;
+            margin: 10px 0px !important;
+          }
+        }
+      }
+
       .field:not(:first-child):not(:last-child):not(:only-child) {
         margin: 0px 10px;
       }
@@ -249,10 +263,19 @@ export default {
     width: 100%;
     bottom: -30px;
     text-align: center;
+    @media #{$screen-xs} {
+      bottom: -100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .button {
       &:first-child {
         margin-right: 35px;
+      }
+      @media #{$screen-xs} {
+        margin: 5px 0px !important;
       }
     }
   }
