@@ -69,3 +69,8 @@ figure {
     display: none;
   }
 }
+.hide-xl {
+  @media #{$screen-xl} {
+    display: none;
+  }
+}
