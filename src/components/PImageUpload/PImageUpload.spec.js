@@ -8,7 +8,8 @@ describe('PImageUpload component', () => {
   let wrapper
   beforeEach(() => {
     wrapper = shallowMount(PImageUpload, {
-      localVue
+      localVue,
+      stubs: ['icon-upload']
     })
   })
 

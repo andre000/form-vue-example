@@ -29,7 +29,8 @@ describe('POrderForm component', () => {
     wrapper = mount(POrderForm, {
       localVue,
       store,
-      sync: false
+      sync: false,
+      stubs: ['icon-upload']
     })
   })
 
@@ -51,6 +52,7 @@ describe('POrderForm component', () => {
       localVue,
       store,
       sync: false,
+      stubs: ['icon-upload'],
       data: () => ({ ...mockedOrder })
     })
 
@@ -64,6 +66,7 @@ describe('POrderForm component', () => {
       localVue,
       store,
       sync: false,
+      stubs: ['icon-upload'],
       data: () => ({ ...mockedOrder, name: '' })
     })
 
@@ -83,6 +86,7 @@ describe('POrderForm component', () => {
       localVue,
       store,
       sync: false,
+      stubs: ['icon-upload'],
       data: () => ({ ...mockedOrder, name: 'f' })
     })
 
@@ -102,6 +106,7 @@ describe('POrderForm component', () => {
       localVue,
       store,
       sync: false,
+      stubs: ['icon-upload'],
       data: () => ({ ...mockedOrder, flavour: '' })
     })
 
@@ -121,6 +126,7 @@ describe('POrderForm component', () => {
       localVue,
       store,
       sync: false,
+      stubs: ['icon-upload'],
       data: () => ({ ...mockedOrder, flavour: 'f' })
     })
 
@@ -140,6 +146,7 @@ describe('POrderForm component', () => {
       localVue,
       store,
       sync: false,
+      stubs: ['icon-upload'],
       data: () => ({ ...mockedOrder, price: 0 })
     })
 
@@ -159,6 +166,7 @@ describe('POrderForm component', () => {
       localVue,
       store,
       sync: false,
+      stubs: ['icon-upload'],
       data: () => ({ ...mockedOrder })
     })
 
