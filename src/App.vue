@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <img src="@/assets/img/pastel-paralax.png" class="app__paralax" />
     <header class="app__header">
       <p-header-background />
       <p-logo class="app__logo" />
@@ -19,6 +20,21 @@ export default {
   components: {
     PLogo,
     PHeaderBackground
+  },
+
+  mounted() {
+    window.addEventListener('mousemove', e => {
+      const { screenX } = e
+      const { width } = window.screen
+
+      document.querySelector(
+        '.app__paralax'
+      ).style.transform = `translateX(${(screenX / width) * 40}px)`
+
+      document.querySelector(
+        '.form__pasteis'
+      ).style.transform = `translateX(-${(screenX / width) * 30}px)`
+    })
   }
 }
 </script>
@@ -42,6 +58,11 @@ export default {
   );
   overflow: hidden;
   min-height: 100vh;
+
+  .app__paralax {
+    position: absolute;
+    z-index: 100;
+  }
 
   .app__header {
     grid-area: 1 / 1 / 2 / 2;
