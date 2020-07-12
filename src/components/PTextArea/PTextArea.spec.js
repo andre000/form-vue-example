@@ -21,11 +21,11 @@ describe('PTextArea component', () => {
 
   it('should display an error when the "errorMessage" prop has value', async () => {
     await wrapper.setProps({ errorMessage: 'This is an error' })
-    expect(wrapper.find('.text__message--error').exists()).toBe(true)
+    expect(wrapper.find('.field__message--error').exists()).toBe(true)
   })
 
   it('should add "text--error" class to the component when an error is displayed', async () => {
     await wrapper.setProps({ errorMessage: 'This is an error' })
-    expect(wrapper.classes('text--error')).toBe(true)
+    expect(wrapper.classes('field--error')).toBe(true)
   })
 })

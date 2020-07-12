@@ -38,8 +38,8 @@ describe('POrderItem component', () => {
     expect(nameEl.exists()).toBe(true)
     expect(priceEl.exists()).toBe(true)
 
-    expect(nameEl.text()).toBe(mockedOrder.name)
-    expect(priceEl.text()).toBe(`${mockedOrder.price}`)
+    expect(nameEl.text()).toBe(`"${mockedOrder.name}"`)
+    expect(priceEl.text()).toBe(`R$ ${mockedOrder.price}`)
   })
 
   it('should show the order flavour and price', () => {
