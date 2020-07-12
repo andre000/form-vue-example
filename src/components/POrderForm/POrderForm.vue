@@ -158,7 +158,7 @@ export default {
 
 .form {
   width: 60vw;
-  box-shadow: 0px 0px 30px #740b0b45;
+  box-shadow: 0px 0px 30px $shadow-color;
   border-radius: 20px;
   position: relative;
   background: #ffffff 0% 0% no-repeat padding-box;
