@@ -36,7 +36,7 @@ export default {
 
       document.querySelector(
         '.form__pasteis'
-      ).style.transform = `translateX(-${(screenX / width) * 30}px)`
+      ).style.transform = `translateX(-${(screenX / width) * 20}px)`
     })
   }
 }
