@@ -26,8 +26,8 @@ describe('POrderList component', () => {
   it('should match the snapshot', () =>
     expect(wrapper.html()).toMatchSnapshot())
 
-  it('should have an ul element with .order-list class', () => {
-    expect(wrapper.find('ul.order-list').exists()).toBe(true)
+  it('should have an element with .order-list class', async () => {
+    expect(wrapper.find('.order-list').exists()).toBe(true)
   })
 
   it('should render "POrderList" component when order prop is received', async () => {

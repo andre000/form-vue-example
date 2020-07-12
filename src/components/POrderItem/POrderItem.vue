@@ -131,7 +131,7 @@ export default {
     border-radius: 20px;
     z-index: 10;
     background: #fff;
-    left: 0px;
+    left: -90px;
     margin-top: 21px;
     width: 180px;
     height: 180px;
