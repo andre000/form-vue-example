@@ -6,6 +6,7 @@ body {
   font-family: $font-family;
   background-image: url('assets/img/pattern.png');
   min-height: 100vh;
+  animation: scroll 400s linear infinite;
 }
 
 figure {
@@ -72,5 +73,11 @@ figure {
 .hide-xl {
   @media #{$screen-xl} {
     display: none;
+  }
+}
+
+@keyframes scroll {
+  100% {
+   background-position:0px -3000px;
   }
 }
