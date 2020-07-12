@@ -5,7 +5,10 @@
       @submit.prevent="handleSubmit"
       @reset.prevent="handleReset"
     >
-      <img src="@/assets/img/pasteis-img.png" class="form__pasteis" />
+      <img
+        src="@/assets/img/pasteis-img.png"
+        class="form__pasteis hide-md hide-sm hide-xs"
+      />
       <div class="form__header">
         <span class="form__title"
           >Monte aqui o seu cardápio. O que está esperando?</span

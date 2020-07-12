@@ -15,6 +15,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/scss/variables.scss';
+
+@media #{$screen-xs} {
+  .logo-type {
+    transform: translateX(-60px);
+  }
+}
+
 .ae {
   fill: #ea473c;
 }

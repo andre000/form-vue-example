@@ -1,6 +1,9 @@
 <template>
   <div class="app">
-    <img src="@/assets/img/pastel-paralax.png" class="app__paralax" />
+    <img
+      src="@/assets/img/pastel-paralax.png"
+      class="app__paralax hide-xs hide-sm hide-md hide-lg"
+    />
     <header class="app__header">
       <p-header-background />
       <p-logo class="app__logo" />
@@ -62,6 +65,7 @@ export default {
   .app__paralax {
     position: absolute;
     z-index: 100;
+    width: 30vw;
   }
 
   .app__header {
