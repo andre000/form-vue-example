@@ -22,4 +22,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.order-list {
+  padding: 0px;
+  position: relative;
+  li {
+    list-style: none;
+  }
+}
+</style>

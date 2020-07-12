@@ -27,5 +27,8 @@ export default {
 <style lang="scss" scoped>
 .home {
   margin-top: -80px;
+  .home__list {
+    margin: 10rem 0px;
+  }
 }
 </style>
