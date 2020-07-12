@@ -105,8 +105,11 @@ export default {
     background: #fff;
     left: 0px;
     margin-top: 21px;
+    width: 180px;
+    height: 180px;
 
     img {
+      object-fit: cover;
       border-radius: 20px;
       width: 180px;
       height: 180px;
