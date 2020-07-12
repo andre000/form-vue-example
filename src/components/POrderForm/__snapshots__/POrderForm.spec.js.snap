@@ -1,20 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`POrderForm component should match the snapshot 1`] = `
-<span><form class="form"><div class="form__switch"><label for="toggle-button"><span>Comida</span> <input type="checkbox" id="toggle-button" style="display: none;"> <i> ⬅ </i>
-<!----> <span>Bebida</span></label></div>
-<div class="form__line"><span><div class="field"><input placeholder="Título do Pedido"> <!----></div></span> <span><div class="field"><input placeholder="Sabor"> <!----></div></span> <span><div class="field"><input type="tel" class="v-money"> <!----></div></span></div>
-<div class="form__line">
-  <div class="text"><textarea></textarea>
-    <!---->
+<span><form class="form"><img src="@/assets/img/pasteis-img.png" class="form__pasteis hide-md hide-sm hide-xs"> <div class="form__header"><span class="form__title">
+        Monte aqui o seu cardápio. <br class="hide-xl"> <span class="hide-xs">O que está esperando?</span></span>
+<div class="form__switch"><label for="toggle-button" class="switch"><span class="selected">Comida</span> <input type="checkbox" id="toggle-button" style="display: none;"> <span class="switch__bar"><i class="switch__button left"></i></span> <span class="">Bebida</span></label></div>
+</div>
+<div class="form__body">
+  <div class="form__row">
+    <div class="field w-40"><input placeholder="Título do Pedido">
+      <!---->
+    </div>
+    <div class="field w-40"><input placeholder="Sabor">
+      <!---->
+    </div>
+    <div class="field w-20"><input type="tel" class="v-money">
+      <!---->
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="field w-100"><textarea placeholder="Descrição"></textarea>
+      <!---->
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="image-upload"><input type="file" accept=".png, .jpg, .jpeg" name="image-order" class="image-upload__input">
+      <!----> <span class="image-upload__message">
+    Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar a
+    pasta.
+  </span>
+      <!---->
+    </div>
   </div>
 </div>
-<div class="form__line">
-  <div class="image-upload"><input type="file" accept=".png, .jpg, .jpeg" name="image-order" class="image-upload__input">
-    <!---->
-  </div>
+<div class="form__footer">
+  <div class="form__actions"><button class="button button--primary" type="reset">Limpar</button> <button class="button button--secondary" type="submit">Cadastrar</button></div>
 </div>
-<div class="form__actions"><button class="button button--default" type="reset">Limpar</button> <button class="button button--default" type="submit">Cadastrar</button></div>
-</form>
-</span>
+</form></span>
 `;

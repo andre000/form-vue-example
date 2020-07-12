@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PTextArea component should match the snapshot 1`] = `
-<div class="text"><textarea></textarea>
+<div class="field"><textarea></textarea>
   <!---->
 </div>
 `;
