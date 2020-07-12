@@ -10,9 +10,10 @@
         class="form__pasteis hide-md hide-sm hide-xs"
       />
       <div class="form__header">
-        <span class="form__title"
-          >Monte aqui o seu cardápio. O que está esperando?</span
-        >
+        <span class="form__title">
+          Monte aqui o seu cardápio. <br class="hide-xl" />
+          <span class="hide-xs">O que está esperando?</span>
+        </span>
         <div class="form__switch">
           <p-switch
             :first-option="{ label: 'Comida', value: 'food' }"
@@ -182,6 +183,11 @@ export default {
     position: relative;
     border-radius: 20px 20px 0px 0px;
 
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      padding: 25px 30px 40px 30px;
+    }
+
     .form__title {
       color: $primary-text;
       font: Bold Italic 24px/29px Roboto;
@@ -192,6 +198,13 @@ export default {
       position: absolute;
       right: 60px;
       top: 25px;
+
+      @media screen and (max-width: 768px) {
+        position: relative;
+        right: 0px;
+        top: 0px;
+        margin-top: 12px;
+      }
     }
   }
 
