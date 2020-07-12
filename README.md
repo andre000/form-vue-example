@@ -9,7 +9,7 @@
 - [x] Filter order by type
 
 ## Nice to have
-- [ ] Responsive layout
+- [X] Responsive layout
 - [x] Unit tests
 - [x] BEM pattern
 - [ ] Animated transition
