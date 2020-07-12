@@ -1,20 +1,20 @@
 # form-vue-example
 
 ## Requirements
-- [ ] Form components
-- [ ] Form validation
-- [ ] Upload image with preview
-- [ ] Create an order
-- [ ] Order List component
-- [ ] Filter order by type
+- [x] Form components
+- [x] Form validation
+- [x] Upload image with preview
+- [x] Create an order
+- [x] Order List component
+- [x] Filter order by type
 
 ## Nice to have
 - [ ] Responsive layout
-- [ ] Unit tests
-- [ ] BEM pattern
+- [x] Unit tests
+- [x] BEM pattern
 - [ ] Animated transition
-- [ ] Drag and drop upload
-- [ ] Paralax effect
+- [x] Drag and drop upload
+- [x] Paralax effect
 
 ## Other cool stuff
 - [ ] e2e tests
