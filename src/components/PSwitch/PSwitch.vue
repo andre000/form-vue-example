@@ -89,6 +89,12 @@ export default {
   cursor: pointer;
   user-select: none;
 
+  @media #{$screen-xs} {
+    span:not(.switch__bar) {
+      display: block;
+    }
+  }
+
   .selected {
     font-weight: bold;
   }
@@ -114,9 +120,11 @@ export default {
 
       &.left {
         transform: translateX(0px);
+        left: 0px;
       }
       &.right {
         transform: translateX(calc(100% + 2px));
+        right: 20px;
       }
     }
   }
