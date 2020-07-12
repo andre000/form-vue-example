@@ -5,6 +5,7 @@
       @submit.prevent="handleSubmit"
       @reset.prevent="handleReset"
     >
+      <img src="@/assets/img/pasteis-img.png" class="form__pasteis" />
       <div class="form__header">
         <span class="form__title"
           >Monte aqui o seu cardápio. O que está esperando?</span
@@ -162,6 +163,15 @@ export default {
   border-radius: 20px;
   position: relative;
   background: #ffffff 0% 0% no-repeat padding-box;
+
+  .form__pasteis {
+    width: 393px;
+    height: 316px;
+    position: absolute;
+    top: calc(-316px / 2);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    right: 0;
+  }
 
   .form__header {
     background: $secondary;

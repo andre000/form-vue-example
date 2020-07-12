@@ -51,12 +51,21 @@ export default {
     position: relative;
     min-height: 346.31px;
     width: 100vw;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 
-    .app__logo svg {
-      max-width: 736px;
-      width: 80vw;
-      position: relative;
+    .app__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      margin-right: 12vw;
+      svg {
+        width: 80vw;
+        max-width: 736px;
+        position: relative;
+        // margin-right: 225px;
+        z-index: 10;
+      }
     }
   }
 
