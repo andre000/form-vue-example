@@ -67,7 +67,7 @@
               @input="handlePriceValidation"
               placeholder="R$"
               is-money
-              :errorMessage="errors[0]"
+              :errorMessage="!isEmptyForm ? errors[0] : ''"
             />
           </validation-provider>
         </div>
@@ -128,6 +128,9 @@ export default {
   }),
 
   computed: {
+    isEmptyForm() {
+      return Object.keys(this.$data).every(data => !this[data])
+    },
     ...mapState(['orderType'])
   },
 
