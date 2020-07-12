@@ -62,8 +62,22 @@ export default {
   background: #fff;
   margin-left: 120px;
 
+  @media #{$screen-sm-xs} {
+    margin-left: 0px;
+  }
+
+  @media #{$screen-xs} {
+    width: 80vw;
+    &:first-child {
+      margin-top: 200px;
+    }
+  }
+
   &:not(:first-child) {
     margin-top: 50px;
+    @media #{$screen-sm-xs} {
+      margin-top: 100px;
+    }
   }
 
   .order-item__header {
@@ -73,6 +87,12 @@ export default {
     padding: 20px 40px 20px 110px;
     display: flex;
     justify-content: space-between;
+
+    @media #{$screen-sm-xs} {
+      padding: 20px 40px;
+      text-align: center;
+      flex-direction: column;
+    }
 
     .order-item__name {
       color: $secondary;
@@ -90,10 +110,18 @@ export default {
     color: $primary-text;
     font: 400 24px/32px Roboto;
 
+    @media #{$screen-sm-xs} {
+      padding: 36px 40px;
+    }
+
     .order-item__subtitle {
       font-weight: bold;
       font-style: italic;
       margin-right: 10px;
+
+      @media #{$screen-sm-xs} {
+        display: block;
+      }
     }
   }
 
@@ -108,11 +136,22 @@ export default {
     width: 180px;
     height: 180px;
 
+    @media #{$screen-sm-xs} {
+      margin-top: -70px;
+      left: calc(50% - 45px);
+      width: 90px;
+      height: 90px;
+    }
+
     img {
       object-fit: cover;
       border-radius: 20px;
       width: 180px;
       height: 180px;
+      @media #{$screen-sm-xs} {
+        width: 90px;
+        height: 90px;
+      }
     }
   }
 }
