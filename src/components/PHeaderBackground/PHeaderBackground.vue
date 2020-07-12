@@ -20,8 +20,8 @@ export default {
 
   methods: {
     resizedPath() {
-      const { width } = window.screen
-      return `M0,544.737C337.9,366.316,1196.843,568.421,${width},300c1.579,0,0-301.579,0-301.579H0Z`
+      const { innerWidth } = window
+      return `M0,544.737C337.9,366.316,1196.843,568.421,${innerWidth},300c1.579,0,0-301.579,0-301.579H0Z`
     }
   }
 }
