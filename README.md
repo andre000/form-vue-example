@@ -17,10 +17,10 @@
 - [x] Paralax effect
 
 ## Other cool stuff
-- [ ] e2e tests
+- [X] e2e tests
 - [ ] Lazy Loading
 - [ ] Page with order detail
-- [ ] Animated SVG
+- [X] Animated SVG
 - [ ] Add Storybook
 
 ## Project setup
