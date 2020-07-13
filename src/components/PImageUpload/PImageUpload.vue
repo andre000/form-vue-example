@@ -90,6 +90,7 @@ export default {
   cursor: pointer;
   padding: 20px;
   position: relative;
+  background: #fff;
 
   .image-upload__input {
     display: none;
