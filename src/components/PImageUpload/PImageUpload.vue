@@ -20,7 +20,12 @@
       pasta.
     </span>
 
-    <img v-if="image && image.preview" :src="image.preview" alt="" />
+    <img
+      loading="lazy"
+      v-if="image && image.preview"
+      :src="image.preview"
+      alt=""
+    />
   </div>
 </template>
 

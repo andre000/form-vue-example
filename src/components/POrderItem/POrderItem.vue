@@ -1,7 +1,7 @@
 <template>
   <li class="order-item">
     <div class="order-item__image">
-      <img :src="orderImage" alt="" srcset="" />
+      <img loading="lazy" :src="orderImage" alt="" srcset="" />
     </div>
     <div class="order-item__header">
       <div class="order-item__name">"{{ order.name }}"</div>

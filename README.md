@@ -22,7 +22,7 @@
 - [X] Animated SVG
 - [X] Add Storybook
 - [X] PWA Support
-- [ ] Lazy Loading
+- [X] Lazy Loading
 - [ ] Page with order detail
 
 ## Project setup

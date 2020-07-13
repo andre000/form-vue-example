@@ -3,6 +3,7 @@
     <img
       src="@/assets/img/pastel-paralax.png"
       class="app__paralax hide-xs hide-sm hide-md hide-lg"
+      loading="lazy"
     />
     <header class="app__header">
       <p-header-background />
