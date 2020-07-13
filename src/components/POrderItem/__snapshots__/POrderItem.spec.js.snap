@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`POrderItem component should match the snapshot 1`] = `
+<li class="order-item">
+  <div class="order-item__image"><img src="image" alt="" srcset=""></div>
+  <div class="order-item__header">
+    <div class="order-item__name">"Suco de Goiaba"</div>
+    <div class="order-item__price">R$ 5</div>
+  </div>
+  <div class="order-item__body">
+    <div><span class="order-item__subtitle">Sabor: </span> Goiaba
+    </div>
+    <div><span class="order-item__subtitle">Descrição: </span>
+      Um mero suco de goiaba. Tem sachet de açúcar no balcão...
+    </div>
+  </div>
+</li>
+`;

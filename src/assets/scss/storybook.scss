@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap');
+@import '~normalize.css/normalize.css';
+@import './variables.scss';
+@import './field.scss';
+@import './utils.scss';
+
+
+body {
+  font-family: $font-family;
+  background-image: url('../img/pattern.png');
+  min-height: 100vh;
+  animation: scroll 400s linear infinite;
+  padding: 2rem;
+}
+
+figure {
+  margin: 0px;
+}
+
+.field {
+  width: 25vw !important;
+}
+
+.background {
+  padding: 1rem;
+  background-color: $secondary;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.image-upload {
+  height: 110px;
+}

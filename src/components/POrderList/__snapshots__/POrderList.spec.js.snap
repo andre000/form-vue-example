@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`POrderList component should match the snapshot 1`] = `
+<div class="order-list">
+  <transition-group-stub tag="ul" name="slide-up" appear="true"></transition-group-stub>
+</div>
+`;

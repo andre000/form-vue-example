@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PImageUpload component should match the snapshot 1`] = `
+<div class="image-upload"><input type="file" accept=".png, .jpg, .jpeg" name="image-order" class="image-upload__input">
+  <icon-upload-stub class="image-upload__icon hide-sm hide-xs"></icon-upload-stub> <span class="image-upload__message">
+    Jogue aqui o arquivo de imagem do seu pastel ou clique para localizar a
+    pasta.
+  </span>
+  <!---->
+</div>
+`;

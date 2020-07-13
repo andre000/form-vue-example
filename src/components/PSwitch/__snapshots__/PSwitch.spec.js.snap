@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PSwitch component should match the snapshot 1`] = `<label for="toggle-button" class="switch"><span class="selected">Foo</span> <input type="checkbox" id="toggle-button" style="display: none;"> <span class="switch__bar"><i class="switch__button left"></i></span> <span class="">Bar</span></label>`;
