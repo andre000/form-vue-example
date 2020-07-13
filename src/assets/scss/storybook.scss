@@ -20,3 +20,10 @@ figure {
 .field {
   width: 25vw !important;
 }
+
+.background {
+  padding: 1rem;
+  background-color: $secondary;
+  width: fit-content;
+  border-radius: 10px;
+}
