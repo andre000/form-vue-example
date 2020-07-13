@@ -19,7 +19,7 @@ export default new Vuex.Store({
   },
   getters: {
     filteredOrders({ orders, orderType }) {
-      return orders.filter(o => o.type === orderType)
+      return orders.filter(o => o.type === orderType).reverse()
     }
   }
 })
