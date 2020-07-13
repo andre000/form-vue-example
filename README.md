@@ -47,6 +47,11 @@ npm run test:unit
 ```
 npm run test:e2e
 ```
+or
+
+```
+npm run test:e2e -- --headless
+```
 
 ### Lints and fixes files
 ```
