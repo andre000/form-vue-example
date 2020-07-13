@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+// Utilities
+.w-40 {
+  width: 40%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+
+.hide-xs {
+  @media #{$screen-xs} {
+    display: none;
+  }
+}
+.hide-sm {
+  @media #{$screen-sm} {
+    display: none;
+  }
+}
+.hide-md {
+  @media #{$screen-md} {
+    display: none;
+  }
+}
+.hide-lg {
+  @media #{$screen-lg} {
+    display: none;
+  }
+}
+.hide-xl {
+  @media #{$screen-xl} {
+    display: none;
+  }
+}
+
+@keyframes scroll {
+  100% {
+   background-position:0px -3000px;
+  }
+}

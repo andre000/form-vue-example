@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap');
 @import '~normalize.css/normalize.css';
 @import './variables.scss';
+@import './field.scss';
+@import './utils.scss';
+
 
 body {
   font-family: $font-family;
@@ -13,71 +16,3 @@ figure {
   margin: 0px;
 }
 
-.field {
-  input, textarea {
-    box-sizing: border-box;
-    border: 1px solid $primary-text;
-    border-radius: 10px;
-    padding: 10px 20px;
-    color: $primary-text;
-    outline: none;
-    width: 100%;
-    &::placeholder {
-      color: $primary-text;
-    }
-  }
-
-  .field__message {
-    font-size: 12px;
-    margin: 3px 5px;
-    &.field__message--error {
-      color: #f00;
-    }
-  }
-}
-
-// Utilities
-.w-40 {
-  width: 40%;
-}
-
-.w-20 {
-  width: 20%;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-
-.hide-xs {
-  @media #{$screen-xs} {
-    display: none;
-  }
-}
-.hide-sm {
-  @media #{$screen-sm} {
-    display: none;
-  }
-}
-.hide-md {
-  @media #{$screen-md} {
-    display: none;
-  }
-}
-.hide-lg {
-  @media #{$screen-lg} {
-    display: none;
-  }
-}
-.hide-xl {
-  @media #{$screen-xl} {
-    display: none;
-  }
-}
-
-@keyframes scroll {
-  100% {
-   background-position:0px -3000px;
-  }
-}
