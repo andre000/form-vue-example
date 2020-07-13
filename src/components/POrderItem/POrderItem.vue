@@ -61,6 +61,8 @@ export default {
   border-radius: 20px;
   background: #fff;
   margin-left: 120px;
+  list-style: none;
+  position: relative;
 
   @media #{$screen-sm-xs} {
     margin-left: 0px;

@@ -65,8 +65,5 @@ export default {
     position: relative;
     padding: 0px;
   }
-  li {
-    list-style: none;
-  }
 }
 </style>
