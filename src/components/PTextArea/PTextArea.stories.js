@@ -1,4 +1,3 @@
-import '@/assets/scss/storybook.scss'
 import { withKnobs, text } from '@storybook/addon-knobs'
 import PTextArea from './PTextArea.vue'
 

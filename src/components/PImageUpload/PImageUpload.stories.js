@@ -1,4 +1,3 @@
-import '@/assets/scss/storybook.scss'
 import { withKnobs } from '@storybook/addon-knobs'
 import PImageUpload from './PImageUpload.vue'
 import image from './__mocks__/image'

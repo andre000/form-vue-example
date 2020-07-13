@@ -1,4 +1,3 @@
-import '@/assets/scss/storybook.scss'
 import PSwitch from './PSwitch.vue'
 
 export default {
