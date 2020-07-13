@@ -171,6 +171,12 @@ export default {
   position: relative;
   background: #ffffff 0% 0% no-repeat padding-box;
 
+  br.hide-xl {
+    @media screen and (max-width: 1358px) {
+      display: block;
+    }
+  }
+
   @media #{$screen-xs} {
     width: 80vw;
   }
@@ -190,7 +196,7 @@ export default {
     position: relative;
     border-radius: 20px 20px 0px 0px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 966px) {
       text-align: center;
       padding: 25px 30px 40px 30px;
     }
@@ -206,7 +212,7 @@ export default {
       right: 60px;
       top: 25px;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 966px) {
         position: relative;
         right: 0px;
         top: 0px;
