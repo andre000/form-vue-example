@@ -66,6 +66,7 @@ export default {
     position: absolute;
     z-index: 100;
     width: 30vw;
+    clip-path: polygon(52% 10%, 81% 35%, 47% 91%, 14% 60%);
   }
 
   .app__header {
