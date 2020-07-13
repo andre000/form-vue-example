@@ -1,4 +1,5 @@
 # form-vue-example
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66a43fed-badd-4353-a927-57ab92c7c5e7/deploy-status)](https://app.netlify.com/sites/dreamy-babbage-0ef548/deploys)
 
 ## Requirements
 - [x] Form components
