@@ -19,10 +19,11 @@
 
 ## Other cool stuff
 - [X] e2e tests
-- [ ] Lazy Loading
-- [ ] Page with order detail
 - [X] Animated SVG
 - [X] Add Storybook
+- [X] PWA Support
+- [ ] Lazy Loading
+- [ ] Page with order detail
 
 ## Project setup
 ```
