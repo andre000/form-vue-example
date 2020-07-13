@@ -21,7 +21,7 @@
 - [ ] Lazy Loading
 - [ ] Page with order detail
 - [X] Animated SVG
-- [ ] Add Storybook
+- [X] Add Storybook
 
 ## Project setup
 ```
