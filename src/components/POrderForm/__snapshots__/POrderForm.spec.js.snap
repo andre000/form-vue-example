@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`POrderForm component should match the snapshot 1`] = `
-<span><form class="form"><img src="@/assets/img/pasteis-img.png" class="form__pasteis hide-md hide-sm hide-xs"> <div class="form__header"><span class="form__title">
+<span><form class="form"><img src="@/assets/img/pasteis-img.png" alt="Pastéis" class="form__pasteis hide-md hide-sm hide-xs"> <div class="form__header"><span class="form__title">
         Monte aqui o seu cardápio. <br class="hide-xl"> <span class="hide-xs">O que está esperando?</span></span>
 <div class="form__switch"><label for="toggle-button" class="switch"><span class="selected">Comida</span> <input type="checkbox" id="toggle-button" style="display: none;"> <span class="switch__bar"><i class="switch__button left"></i></span> <span class="">Bebida</span></label></div>
 </div>
