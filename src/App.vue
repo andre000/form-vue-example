@@ -4,6 +4,7 @@
       src="@/assets/img/pastel-paralax.png"
       class="app__paralax hide-xs hide-sm hide-md hide-lg"
       loading="lazy"
+      alt="Pastel"
     />
     <header class="app__header">
       <p-header-background />

@@ -8,6 +8,7 @@
       <img
         src="@/assets/img/pasteis-img.png"
         class="form__pasteis hide-md hide-sm hide-xs"
+        alt="Pastéis"
       />
       <div class="form__header">
         <span class="form__title">

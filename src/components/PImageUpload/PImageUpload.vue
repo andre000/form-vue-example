@@ -22,9 +22,9 @@
 
     <img
       loading="lazy"
+      alt="Pré-visualização"
       v-if="image && image.preview"
       :src="image.preview"
-      alt=""
     />
   </div>
 </template>
