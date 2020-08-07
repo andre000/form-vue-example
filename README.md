@@ -12,7 +12,7 @@
 
 > A simple form made in Vue.js with unit tests, e2e tests and storybook
 
-### ✨ [Demo](https://doc88.dev-next.com/)
+### ✨ [Demo](https://pastel.dev-next.com/)
 
 ---
 
